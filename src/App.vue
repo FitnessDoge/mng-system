@@ -1,8 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// 验证登录是否过期
+</script>
 
 <template>
-  <h1>App</h1>
-  <el-button type="success">success</el-button>
+  <router-view></router-view>
 </template>
 
 <style scoped></style>
