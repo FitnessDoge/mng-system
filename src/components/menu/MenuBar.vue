@@ -20,7 +20,7 @@ const menuItems = [
 </script>
 
 <template>
-  <el-menu default-active="0" class="el-menu-vertical-demo" router>
+  <el-menu class="el-menu-vertical-demo" router>
     <template v-for="(item, index) in menuItems" :key="index">
       <el-menu-item v-if="!item.hasSubmenu" :index="index" :route="item.route">
         <component class="el-icon" :is="item.icon"></component>
@@ -34,7 +34,7 @@ const menuItems = [
         <el-menu-item
           v-for="(child, subIndex) in item.children"
           :key="subIndex"
-          :index="index - subIndex"
+          :index="index + '-' + subIndex"
           :route="child.route"
           >{{ child.title }}</el-menu-item
         >
